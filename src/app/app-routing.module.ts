@@ -4,12 +4,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
 
-
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/home'
-
+    redirectTo: '/login'
   },
   {
     path: 'login',
@@ -18,6 +16,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
 
 ];
