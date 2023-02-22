@@ -30,7 +30,7 @@
       <form (submit)="login()">
         <mat-form-field class="form-field">
           <mat-label>Username:</mat-label>
-          <input matInput [(ngModel)]="username" name="usuario" required>
+          <input matInput [(ngModel)]="username"  #InputUser name="usuario" required autofocus>
         </mat-form-field>
 
         <mat-form-field class="form-field">

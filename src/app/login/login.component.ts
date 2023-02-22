@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { MatInput } from '@angular/material/input';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +7,21 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('InputUser')
+  inputUser!: MatInput;
   username?: string;
   password?: string;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.inputUser.focus();
+
   }
 
   login(){
