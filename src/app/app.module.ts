@@ -12,8 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
@@ -24,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     HomeComponent,
     NavbarComponent
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatButtonModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatIcon
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule
+
 
   ],
   providers: [],
