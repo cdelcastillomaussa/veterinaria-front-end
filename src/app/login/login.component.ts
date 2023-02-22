@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     if(this.username === 'jupiter' && this.password === 'jupiter'){
       this.router.navigate(['/home']);
     }
+    
   }
 
 
