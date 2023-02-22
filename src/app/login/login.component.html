@@ -1,4 +1,4 @@
-<form>
+<!--<form>
   <div>
     <label for="usuario">Usuario:</label>
     <input type="text" id="usuario"  [(ngModel)]="username" name="usuario">
@@ -12,3 +12,36 @@
 
 
 </form>
+<mat-form-field>
+  <mat-label>Username:</mat-label>
+  <input matInput placeholder="username" [(ngModel)]="username">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Password:</mat-label>
+  <input matInput type="password" placeholder="password" [(ngModel)]="password">
+</mat-form-field>
+<button mat-raised-button color="primary" type="submit" (click)="login()">Iniciar sesión</button>-->
+
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header class="header">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+      <form (submit)="login()">
+        <mat-form-field class="form-field">
+          <mat-label>Username:</mat-label>
+          <input matInput [(ngModel)]="username" name="usuario" required>
+        </mat-form-field>
+
+        <mat-form-field class="form-field">
+          <mat-label>Password:</mat-label>
+          <input matInput [(ngModel)]="password" name="contrasena" type="password" required>
+        </mat-form-field>
+
+        <button class="button" mat-raised-button color="primary" type="submit">Iniciar sesión</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
