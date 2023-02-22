@@ -16,10 +16,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    if(this.username === 'jupiter' && this.password === 'jupiter'){
+    if(this.username === 'demo.demo' && this.password === 'jupiter48'){
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor intente de nuevo.');
+      this.username = '';
+      this.password = '';
     }
 
   }
