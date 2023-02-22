@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor intente de nuevo.');
+      this.btnIngresar.disabled = true;
       this.username = '';
       this.password = '';
     }
