@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,13 +15,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    if(this.username === 'jupiter' && this.password === 'b3xsaturno'){
+  onSubmit(){
+    if(this.username === 'jupiter' && this.password === 'jupiter'){
       this.router.navigate(['/home']);
-    } else {
-      alert('Credenciales incorrectas. Por favor intente de nuevo.');
-      //this.router.navigate(['/login']);
     }
   }
+
+
 
 }
