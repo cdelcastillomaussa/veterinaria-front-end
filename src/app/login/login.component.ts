@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
     } else {
       alert('Credenciales incorrectas. Por favor intente de nuevo.');
     }
+    
   }
 
 }
