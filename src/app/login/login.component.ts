@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +7,6 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   username?: string;
   password?: string;
 
@@ -17,12 +15,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    if(this.username === 'jupiter' && this.password === 'b3xsaturno'){
+  onSubmit(){
+    if(this.username === 'jupiter' && this.password === 'jupiter'){
       this.router.navigate(['/home']);
-    } else {
-      alert('Credenciales incorrectas. Por favor intente de nuevo.');
     }
   }
+
+
 
 }
