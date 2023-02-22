@@ -30,15 +30,15 @@
       <form (submit)="login()">
         <mat-form-field class="form-field">
           <mat-label>Username:</mat-label>
-          <input matInput [(ngModel)]="username"  #InputUser name="usuario" required autofocus>
+          <input matInput [(ngModel)]="username"  #InputUser name="usuario" required autofocus (input)="habilitarBtnIngresar()">
         </mat-form-field>
 
         <mat-form-field class="form-field">
           <mat-label>Password:</mat-label>
-          <input matInput [(ngModel)]="password" name="contrasena" type="password" required>
+          <input matInput [(ngModel)]="password"  #InputPass name="contrasena" type="password" required  (input)="habilitarBtnIngresar()">
         </mat-form-field>
 
-        <button class="button" mat-raised-button color="primary" type="submit">Iniciar sesión</button>
+        <button class="button" mat-raised-button color="primary" type="submit" #btnIngresar disabled>Iniciar sesión</button>
       </form>
     </mat-card-content>
   </mat-card>

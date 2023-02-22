@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ViewRef } from '@angular/core';
+import { MatButton } from '@angular/material/button';
 import { MatInput } from '@angular/material/input';
 import { Router } from '@angular/router';
 
@@ -11,6 +12,13 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   @ViewChild('InputUser')
   inputUser!: MatInput;
+
+  @ViewChild('InputPass')
+  inputPass!: MatInput;
+
+  @ViewChild('btnIngresar')
+  btnIngresar!: MatButton;
+
   username?: string;
   password?: string;
 
@@ -24,16 +32,27 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   }
 
-  login(){
-    if(this.username === 'demo.demo' && this.password === 'jupiter48'){
+  habilitarBtnIngresar(){
+    if(this.username  && this.password ){
+      this.btnIngresar.disabled = false;
+    } else {
+      this.btnIngresar.disabled = true;
+    }
+  }
+
+  login() {
+    if (this.username === 'demo.demo' && this.password === 'jupiter48') {
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor intente de nuevo.');
       this.username = '';
       this.password = '';
     }
-
   }
+
+
+
+
 
 
 
