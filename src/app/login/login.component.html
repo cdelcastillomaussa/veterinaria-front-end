@@ -1,30 +1,7 @@
-<!--<form>
-  <div>
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario"  [(ngModel)]="username" name="usuario">
-  </div>
-
-  <div>
-    <label for="contraseña">Contraseña:</label>
-    <input type="password"  [(ngModel)]="password"   name="password">
-  </div>
-  <button type="submit" (click)="onSubmit()">Iniciar sesi&oacute;n</button>
-</form>
-<mat-form-field>
-  <mat-label>Username:</mat-label>
-  <input matInput placeholder="username" [(ngModel)]="username">
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label>Password:</mat-label>
-  <input matInput type="password" placeholder="password" [(ngModel)]="password">
-</mat-form-field>
-<button mat-raised-button color="primary" type="submit" (click)="login()">Iniciar sesión</button>-->
 
 <div class="container">
   <mat-card class="card">
     <mat-card-header class="header">
-      <mat-card-title>Login</mat-card-title>
     </mat-card-header>
     <mat-card-content class="content">
       <form (submit)="login()">
@@ -38,7 +15,7 @@
           <input matInput [(ngModel)]="password"  #InputPass name="contrasena" type="password" required  (input)="habilitarBtnIngresar()">
         </mat-form-field>
 
-        <button class="button" mat-raised-button color="primary" type="submit" #btnIngresar disabled>Iniciar sesión</button>
+        <button class="button" mat-raised-button  type="submit" #btnIngresar disabled>Iniciar sesión</button>
       </form>
     </mat-card-content>
   </mat-card>

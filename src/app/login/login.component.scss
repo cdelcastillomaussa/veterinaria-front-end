@@ -1,17 +1,25 @@
 .mat-raised-button {
-  background-color: rgb(80, 71, 255);
+  background-color: #2F80ED;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: white;
 }
 
-.mat-card-header .mat-card-title {
-  font-size: 151px;
+.mat-raised-button:hover {
+  opacity: 0.80;
 }
+
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url('../../assets/Utils/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card {
@@ -21,10 +29,12 @@
 }
 
 .header {
-  background-color: #1976d2;
+  width: 605px;
+  height: 315px;
   color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background-image: url('../../assets/Utils/LogoSoftcaribbean.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content {
@@ -39,4 +49,23 @@
   margin-top: 16px;
   width: 100%;
   border-radius: 20px;
+}
+
+//Mediaquery
+@media only screen and (max-width:750px) {
+  .container {
+    display: block;
+    padding-top: 160px;
+    padding-left: 10px;
+  }
+
+  .header {
+    width: 315px;
+    height: 150px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
 }
