@@ -1,26 +1,3 @@
-<!--<mat-toolbar color="primary">
-  <span>My App</span>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/login">Home</button>
-  <button mat-button routerLink="/about">About</button>
-  <button mat-button routerLink="/contact">Contact</button>
-</mat-toolbar>
-
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button  >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="spacer"></span>
-    <button mat-icon-button >
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button >
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>-->
 <div class="toolbar-container">
   <mat-toolbar class="header-toolbar">
     <button mat-icon-button (click)="snav.toggle()">
@@ -33,19 +10,26 @@
     <mat-sidenav #snav class="sidenav">
       <mat-nav-list class="nav-list">
         <div>
-          <img src="../../../../assets/utils/LogoSoftcaribbean.png" class="menu-log">
+          <img src="../../assets/Utils/LogoSoftcaribbean.png" class="menu-logo">
         </div>
         <div class="items__container">
           <div class="header">
             <div class="lista">
                 <nav class="nav" >
                   <button class="boton1 btn" >
-                    <mat-icon class="icon">home</mat-icon>
+                    <mat-icon class="icon">home</mat-icon>Veterinaria
                   </button>
                   <ul class="lista" >
                     <li class="menuHijo" >
                         <a class="btn">
-                          <mat-icon class="icon">share</mat-icon>
+                          <mat-icon class="icon">share</mat-icon>Registrar paciente
+                        </a>
+                    </li>
+                  </ul>
+                  <ul class="lista" >
+                    <li class="menuHijo" >
+                        <a class="btn">
+                          <mat-icon class="icon">share</mat-icon>Registrar dueño
                         </a>
                     </li>
                   </ul>
