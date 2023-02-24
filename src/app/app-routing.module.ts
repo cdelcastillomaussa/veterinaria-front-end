@@ -1,22 +1,35 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-
+import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login/components/login/login.component';
+import { NavbarComponent } from './navbar/components/navbar/navbar.component';
 const routes: Routes = [
 
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '/login'
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/login'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'navbar',
+        component: NavbarComponent
+      }
+
+    ]
   },
+
   {
     path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path: '**',
@@ -27,7 +40,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
